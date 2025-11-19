@@ -1,23 +1,19 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('theme-toggle');
-    const body = document.body;
+const themeToggle = document.querySelector('.theme-toggle');
+const themes = ['light', 'dark'];
+// const themes = ['light', 'dark', 'high-contrast'];
+let currentThemeIndex = 0;
 
-    // Check for saved theme preference or default to light
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    body.setAttribute('data-theme', currentTheme);
-    updateButtonIcon(currentTheme);
+// Load saved theme or default to light
+const savedTheme = localStorage.getItem('theme') || 'light';
+currentThemeIndex = themes.indexOf(savedTheme);
+if (currentThemeIndex === -1) currentThemeIndex = 0;
+document.documentElement.setAttribute('data-theme', savedTheme === 'light' ? '' : savedTheme);
 
-    toggleButton.addEventListener('click', () => {
-        const newTheme = body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-        body.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateButtonIcon(newTheme);
-    });
-
-    function updateButtonIcon(theme) {
-        toggleButton.innerHTML = '<i class="material-icons">contrast</i>';
-        toggleButton.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
-    }
+themeToggle.addEventListener('click', () => {
+    currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+    const newTheme = themes[currentThemeIndex];
+    document.documentElement.setAttribute('data-theme', newTheme === 'light' ? '' : newTheme);
+    localStorage.setItem('theme', newTheme);
 });
 
 
