@@ -358,6 +358,11 @@ section {
     animation: fadeIn 2s ease-in-out forwards;
     align-self: center;
     margin: 0 0.5rem;
+    position: relative;
+}
+
+.arrow::before {
+    content: "→";
 }
 
 @keyframes fadeIn {
@@ -494,6 +499,9 @@ section {
         width: 100%;
         text-align: center;
     }
+    .arrow::before {
+        content: "↓";
+    }
 }
 
 @media (max-width: 600px) {
@@ -552,5 +560,8 @@ section {
     .btn {
         width: 100%;
         text-align: center;
+    }
+    .arrow::before {
+        content: "↓";
     }
 }
