@@ -343,7 +343,7 @@ section {
 
 .step i {
     font-size: 3rem;
-    color: var(--primary-color, var(--accent)); /* Use CSS variables for theme */
+    color: var(--accent); /* Use CSS variables for theme */
 }
 
 .step p {
