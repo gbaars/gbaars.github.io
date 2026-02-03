@@ -1,11 +1,10 @@
 :root {
-    --bg: #f7f9fb;
-    --text: #111111;
-    --card: #ffffff;
-    --accent: #ff69b4;
-    --pink: #ff69b4;
+    --bg: #ffffff;
+    --text: #000000;
+    --card: #f0f0f0;
+    --accent: #a52a2a;
     --hero-text-color: #ffffff;
-    --black: #111111;
+    --black: #000000;
     --container: 70%;
     --radius: 10px;
     --gap: 20px;
@@ -14,33 +13,18 @@
 }
 
 [data-theme="dark"] {
-    --bg: #111111;
-    --text: #f7f9fb;
+    --bg: #000000;
+    --text: #bebebe;
     --card: #1a1a1a;
-    --accent: #ff69b4;
-    --pink: #ff69b4;
-    --hero-text-color: #ffffff;
-    --black: #111111;
+    --accent: #ffff00;
+    --pink: #ff00ff;
+    --hero-text-color: #3c9dfb;
+    --black: #000000;
     --container: 70%;
     --radius: 10px;
     --gap: 20px;
     --header-height: 70px;
     font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial
-}
-
-[data-theme="high-contrast"] {
-    --bg: #000000;
-    --text: #ffffff;
-    --card: #000000;
-    --accent: #ff69b4;
-    --pink: #ff69b4;
-    --hero-text-color: #ffffff;
-    --black: #111111;
-    --container: 70%;
-    --radius: 10px;
-    --gap: 20px;
-    --header-height: 70px;
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
 .theme-toggle {
